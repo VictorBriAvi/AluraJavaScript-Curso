@@ -1,0 +1,42 @@
+<ul>
+    <li class="invitado">
+        Nombre <span class="nombre">Diego</span>,
+        edad <span class="edad">23</span>
+    </li>
+    <li class="invitado">
+        Nombre <span class="nombre">Daniel</span>,
+        edad <span class="edad">42</span>
+    </li>    
+    <li class="invitado">
+        Nombre <span class="nombre">Marcos</span>,
+        edad <span class="edad">27</span>
+    </li>    
+    <li class="invitado">
+        Nombre <span class="nombre">Fabio</span>,
+        edad <span class="edad">18</span>
+    </li>
+
+    Total de las edades: <span class="total"></span>
+</ul>
+
+<script>
+
+    var items = document.querySelectorAll('.invitado');
+    
+    document.querySelector('.total').textContent = calcularEdades(items);
+
+    function calcularEdades(items){
+
+        var totalEdades = 0;
+
+        for(var i = 0; i < items .length; i++) {
+
+            var edad = items[i].querySelector('.edad').textContent;
+            totalEdades +=parseInt(edad);
+
+            
+        }
+        return  totalEdades;
+    }
+
+</script>

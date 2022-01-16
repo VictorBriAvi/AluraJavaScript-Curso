@@ -1,0 +1,40 @@
+<button class="boton">Calcular</button>
+<input class="numero1">
+<input class="numero2">
+<span class="resultado"></span>
+
+<script>
+
+    var boton = document.querySelector('.boton');
+    var numero = document.querySelector('.numero1');
+    var tabla = document.querySelector('.numero2');
+
+    var resultado = document.querySelector('.resultado');
+
+    boton.addEventListener('click', function(event) {
+
+        event.preventDefault();
+
+
+
+        Numero1 = numero.value;
+        Numero2 = tabla.value;
+
+        resultado.textContent = calcularMultiplicacion(Numero1, Numero2);
+        
+    });
+
+
+    function calcularMultiplicacion(numero1, numero2){
+
+        var resultadoPeso = numero1 * numero2;
+        return resultadoPeso;
+
+
+    }
+
+    
+
+
+
+</script>

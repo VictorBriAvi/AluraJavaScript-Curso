@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loteria</title>
+</head>
+<body>
+
+    <script>
+
+        function saltoLinea(){
+
+            document.write("<br>");
+            document.write("<br>");
+        }
+
+        function imprimir(frase){
+
+            document.write(frase);
+            saltoLinea();
+
+        }
+
+        function sortear(n){
+
+            return Math.round(Math.random()*n);
+
+        }
+
+        function loteria(numero1) {
+           return sortear(numero1);
+        }
+
+
+        var numeroUsuario = parseInt(prompt("Ingrese el numero deseado"));
+        var numeroPensado = loteria(10);
+
+        imprimir("El ingresado por el usuario es: "+ numeroUsuario +
+        " El numero pensado por la pc es : "+ numeroPensado);
+
+        if (numeroUsuario == numeroPensado){
+
+            imprimir("El numero fue descubierto !!EXITOS!!")
+
+        }
+
+        if (numeroUsuario > numeroPensado || numeroPensado < numeroUsuario){
+
+            imprimir("Ingresaste un numero mayor o menor al rango especificado, el rango es "+ numeroPensado);
+
+        }
+
+    </script>
+
+</body>
+</html>
